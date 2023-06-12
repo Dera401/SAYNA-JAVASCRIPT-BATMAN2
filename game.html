@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/game.css">
+    <title>Game | Projet Batman</title>
+</head>
+
+<body>
+    <header>
+        <nav id="home">
+            <a onmouseover="changeImagelogoHome()" onmouseout="reset()" href="index.html"><img
+                    src="Assets/Logos/logohome.png" alt="logo emblématique de Batman" id="idLogoHome"
+                    class="logoHome jaune" /></a>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="game.html">GAME</a></li>
+
+            </ul>
+        </nav>
+        <div id="navigationDroite">
+            <a href="#home" onmouseover="changeImageBatHaut()" onmouseout="reset()"><img id="batHaut"
+                    src="Assets/Logos/logo_bat_flèche.png" class="jaune" alt="fleche haut" /></a>
+            <div class="logoDroite">
+                <a href="https://www.facebook.com" onmouseover="changeImageFb()" onmouseout="reset()"
+                    target="_blank"><img src="Assets/Logos/icon_facebook.png" id="fb" class="jaune"
+                        alt="logo Facebook" /></a>
+                <a href="https://www.instagram.com" onmouseover="changeImageIg()" onmouseout="reset()"
+                    target="_blank"><img src="Assets/Logos/icon_ig.png" id="ig" class="jaune"
+                        alt="logo Instagram" /></a>
+                <a href="https://www.twitter.com" onmouseover="changeImageTw()" onmouseout="reset()"
+                    target="_blank"><img src="Assets/Logos/icon_tw.png" id="tw" class="jaune" alt="logo Twitter" /></a>
+            </div>
+            <a href="#form" onmouseover="changeImageBatBas()" onmouseout="reset()"><img id="batBas"
+                    src="Assets/Logos/logo_bat_flèche_2.png" class="jaune" alt="fleche bas" /></a>
+        </div>
+
+    </header>
+    <main>
+        <!--section Intro-->
+        <section class="intro">
+            <h1><strong class="batman">Let’s play a <br>little game...</strong></h1>
+        </section>
+
+        <div class="flechedw">
+            <img src="Assets/Logos/flèche_down_header.png" alt="fleche" />
+        </div>
+        <!-- section quiz -->
+    </main>
+    <footer>
+        <div><img src="Assets/Logos/icon_WB.png" alt="logo Warner Bross" />
+            <p>Ce projet respecte l’univers cinématographique des films Batman récents.
+                Version Nolan & Snyder & Reeves</p>
+        </div>
+        <div class="logofoot">
+            <a href="#" onmouseover="changeSaynaFooter()" onmouseout="resetFooter()"><img class="jaune_footer"
+                    id="SaynaFooter" src="Assets/Logos/logo_sayna_white.png" alt="logo SAYNA" /></a>
+            <a href="#" onmouseover="changeXfooter()" onmouseout="resetFooter()"><img class="jaune_footer" id="xFooter"
+                    src="Assets/Logos/icon_x.png" alt="logo x" /></a>
+            <a href="#" onmouseover="changeDcFooter()" onmouseout="resetFooter()"><img class="jaune_footer"
+                    id="dcFotter" src="Assets/Logos/icon_DC.png" alt="logo DC" /></a>
+            <a href="#" onmouseover="changeFbFooter()" onmouseout="resetFooter()"><img class="jaune_footer"
+                    id="fbFooter" src="Assets/Logos/icon_facebook.png" alt="logo Facebook" /></a>
+            <a href="#" onmouseover="changeIgFooter()" onmouseout="resetFooter()"><img class="jaune_footer"
+                    id="igFooter" src="Assets/Logos/icon_ig.png" alt="logo Instagram" /></a>
+            <a href="#" onmouseover="changeTwFooter()" onmouseout="resetFooter()"><img class="jaune_footer"
+                    id="twFooter" src="Assets/Logos/icon_tw.png" alt="logo Twitter" /></a>
+        </div>
+        <script src="./script.js"></script>
+</body>
+
+</html>
