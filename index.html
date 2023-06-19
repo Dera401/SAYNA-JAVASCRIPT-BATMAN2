@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Home | The hero Batman</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
 </head>
 
 <body>
@@ -26,7 +26,7 @@
             </ul>
         </nav>
         <div id="navigationDroite">
-            <a href="#home" onmouseover="changeImageBatHaut()" onmouseout="reset()"><img id="batHaut"
+            <a onmouseover="changeImageBatHaut()" onmouseout="reset()"><img id="batHaut"
                     src="Assets/Logos/logo_bat_flèche.png" class="jaune" alt="fleche haut" /></a>
             <div class="logoDroite">
                 <a href="https://www.facebook.com" onmouseover="changeImageFb()" onmouseout="reset()"
@@ -38,14 +38,14 @@
                 <a href="https://www.twitter.com" onmouseover="changeImageTw()" onmouseout="reset()"
                     target="_blank"><img src="Assets/Logos/icon_tw.png" id="tw" class="jaune" alt="logo Twitter" /></a>
             </div>
-            <a href="#form" onmouseover="changeImageBatBas()" onmouseout="reset()"><img id="batBas"
+            <a onmouseover="changeImageBatBas()" onmouseout="reset()"><img id="batBas"
                     src="Assets/Logos/logo_bat_flèche_2.png" class="jaune" alt="fleche bas" /></a>
         </div>
 
     </header>
     <main>
         <!--section Intro-->
-        <section class="intro">
+        <section class="intro cacheContent">
             <p>
                 Au nom de ses parents assassinés, Bruce Wayne mène une guerre éternelle
                 contre les criminels de Gotham City. Il est vengeur. Il est la nuit.
@@ -54,8 +54,8 @@
 
             <div id="ancre">
                 <ul>
-                    <li class="first"><a href="#batmanAuCine">VOIR LE HEROS</a></li>
-                    <li><a href="#nemesis">LES ADVERSAIRES</a></li>
+                    <li class="first"><a>VOIR LE HEROS</a></li>
+                    <li class="second"><a>LES ADVERSAIRES</a></li>
                 </ul>
             </div>
         </section>
@@ -66,9 +66,9 @@
 
         <!-- section Batman au cinema -->
         <section id="batmanAuCine">
-            <h2 class="grand-titre">BATMAN AU CINÉMA</h2>
+            <h2 class="grand-titre cacheContent">BATMAN AU CINÉMA</h2>
 
-            <p>
+            <p class="cacheContent">
                 Le personnage de Batman est un super héros de l’univers de DC
                 Comics. Il a été créé par le dessinateur Bob Kane et le scénariste
                 Bill Finger et apparaît pour la première fois dans le comic book
@@ -78,7 +78,7 @@
                 de nombreux reboot, donnant l’occasion à de multiples acteurs
                 d’interpréter l’homme chauve-souris. Voici les trois derniers :
             </p>
-            <div class="carte">
+            <div class="carte cacheCarte">
                 <div class="robert item">
                     <img src="Assets/Illustrations/Bathome2.png" alt="Robert Pattinson" />
                     <div class="legende">
@@ -117,8 +117,8 @@
         <!--Section Nemesis-->
         <section id="nemesis">
             <img src="Assets/Illustrations/Bathome13.png" alt="gadjet">
-            <h2 class="grand-titre">NÉMÉSIS</h2>
-            <p>
+            <h2 class="grand-titre cacheContent">NÉMÉSIS</h2>
+            <p class="cacheContent">
                 Batman souhaite éradiquer la criminalité de Gotham. C’est pourquoi, il
                 affrontera la plupart du temps, des vilains sans capacités
                 surnaturelles mais particulièrement violents ou psychopathes. Avec son
@@ -127,7 +127,7 @@
                 Parmi les derniers ennemis emblématiques que nous avons pu voir au
                 cinéma, on retrouve :
             </p>
-            <div class="carte">
+            <div class="carte cacheCarte">
                 <div class="riddler item">
                     <img src="Assets/Illustrations/Bathome5.png" alt="The Riddler" />
                     <div class="legende">
@@ -165,8 +165,8 @@
         <section>
             <img src="Assets/Illustrations/Bathome12.png" class="batDroite" alt="Batman coté droit">
 
-            <h2 class="grand-titre">ALLIÉS</h2>
-            <p>
+            <h2 class="grand-titre cacheContent">ALLIÉS</h2>
+            <p class="cacheContent">
                 Alfred est le majordome des Wayne. A leur mort il s’occupe de
                 l’éducation du jeune Bruce avant de l’assister dans son rôle du
                 Batman. Ce dernier rencontrera Catwoman dès le premier numéro des
@@ -177,7 +177,7 @@
                 ville de la criminalité qui y règne.
             </p>
 
-            <div class="carte">
+            <div class="carte cacheCarte">
                 <div class="alfred item">
                     <img src="Assets/Illustrations/Bathome9.png" alt="Alfred Pennyworth" />
                     <div class="legende">
@@ -213,8 +213,8 @@
 
         <!--section Ligue des justiciers -->
         <section id="ligue">
-            <h2 class="grand-titre">JUSTICE LEAGUE</h2>
-            <p>
+            <h2 class="grand-titre cacheContent">JUSTICE LEAGUE</h2>
+            <p class="cacheContent">
                 Lorsque la Terre est menacée les plus grands super-héros s’allient
                 pour la protéger. Ils doivent cependant apprendre à se faire confiance
                 mutuellement et à faire équipe ce qui ne sera pas chose aisée.
@@ -222,15 +222,15 @@
                 la Terre, ceux vers qui le monde entier se tourne lorsque les menaces
                 extraterrestres ou surnaturelles menacent son existence.
             </p>
-            <div>
+            <div class="cacheCarte">
                 <img src="Assets/Illustrations/Bathome11.png" class="league" alt="photo de justice league" />
             </div>
 
         </section>
 
         <!--section bande annonce-->
-        <section>
-            <h2 class="grand-titre">MULTIMÉDIA</h2>
+        <section class="cacheContent">
+            <h2 class="grand-titre ">MULTIMÉDIA</h2>
             <div class="multimed">
                 <div>
                     <img src="Assets/Logos/icon_flèche_1.png" class="flecheG" alt="fleche gauche" />
@@ -261,7 +261,7 @@
             </div>
 
 
-            <video src="https://www.youtube.com/watch?v=jXrFsn9pcZY" preload="auto"
+            <video class="cacheCarte" src="https://www.youtube.com/watch?v=jXrFsn9pcZY" preload="auto"
                 poster="Assets/Illustrations/Bathome_ba2.png" controls>
                 <p>
                     Dans le cas où votre navigateur ne parvient pas à charger la video,

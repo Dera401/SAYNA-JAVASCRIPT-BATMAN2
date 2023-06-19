@@ -73,6 +73,87 @@ function resetFooter() {
   collecJaune[5].src = "Assets/Logos/icon_tw.png";
 }
 
+// scroll du document
+const flecheHaut = document.querySelector("#batHaut");
+const flecheBas = document.querySelector("#batBas");
+
+flecheBas.addEventListener("click", () => {
+  window.scrollBy({
+    top: 250,
+    behavior: "smooth",
+  });
+});
+
+flecheHaut.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+// animation en fonction du scroll
+// definition de l'API intersection observer
+const ratio = 0.1;
+const options = {
+  root: null, //zone d'affichage
+  rootMargin: "0px", //marge d'affichage
+  threshold: ratio, //ratio du declenchement de l'observateur
+};
+
+const detectIntersect = (entries, observer) => {
+  entries.forEach(function (entry) {
+    if (entry.intersectionRatio > ratio) {
+      entry.target.classList.add("reveleCarte");
+      observer.unobserve(entry.target);
+    }
+  });
+};
+const observer = new IntersectionObserver(detectIntersect, options);
+document.querySelectorAll(".cacheCarte").forEach(function (cache) {
+  observer.observe(cache);
+});
+
+// animation avec scroll pour les textes
+const optionsContent = {
+  root: null, //zone d'affichage
+  rootMargin: "0px", //marge d'affichage
+  threshold: ratio, //ratio du declenchement de l'observateur
+};
+
+const detectIntersection = (entries, observervateur) => {
+  entries.forEach(function (entry) {
+    if (entry.intersectionRatio > ratio) {
+      entry.target.classList.add("reveleContent");
+      observervateur.unobserve(entry.target);
+    }
+  });
+};
+const observervateur = new IntersectionObserver(
+  detectIntersection,
+  optionsContent
+);
+document.querySelectorAll(".cacheContent").forEach(function (cache) {
+  observervateur.observe(cache);
+});
+
+// changement du deplacement vers ancre en js
+const batmanCine = document.querySelector(".first");
+const nemesis = document.querySelector(".second");
+
+batmanCine.addEventListener("click", () => {
+  window.scrollBy({
+    top: 950,
+    behavior: "smooth",
+  });
+});
+
+nemesis.addEventListener("click", () => {
+  window.scrollBy({
+    top: 1700,
+    behavior: "smooth",
+  });
+});
+
 // section popup
 // enregistrement des variables necessaire à l'evenement
 const confirmbtn = document.getElementById("confirmbtn");
@@ -132,11 +213,6 @@ btnTout.addEventListener("click", (evt) => {
   btnComics.style.background = "transparent";
 });
 
-// jquery pour le select en utilisant la librairie select2
-$(document).ready(function () {
-  $(".myselect").select2();
-});
-
 // legendes des images de carte
 const legendes = document.getElementsByClassName("legende");
 const items = document.getElementsByClassName("item");
@@ -150,68 +226,7 @@ for (let i = 0; i < items.length; i++) {
   });
 }
 
-// version sans boucle
-/*
-items[0].addEventListener("mouseover", () => {
-  legendes[0].style.display = "block";
+// jquery pour le select en utilisant la librairie select2
+$(document).ready(function () {
+  $(".myselect").select2();
 });
-items[0].addEventListener("mouseout", () => {
-  legendes[0].style.display = "none";
-});
-
-items[1].addEventListener("mouseover", () => {
-  legendes[1].style.display = "block";
-});
-items[1].addEventListener("mouseout", () => {
-  legendes[1].style.display = "none";
-});
-
-items[2].addEventListener("mouseover", () => {
-  legendes[2].style.display = "block";
-});
-items[2].addEventListener("mouseout", () => {
-  legendes[2].style.display = "none";
-});
-
-items[3].addEventListener("mouseover", () => {
-  legendes[3].style.display = "block";
-});
-items[3].addEventListener("mouseout", () => {
-  legendes[3].style.display = "none";
-});
-
-items[4].addEventListener("mouseover", () => {
-  legendes[4].style.display = "block";
-});
-items[4].addEventListener("mouseout", () => {
-  legendes[4].style.display = "none";
-});
-
-items[5].addEventListener("mouseover", () => {
-  legendes[5].style.display = "block";
-});
-items[5].addEventListener("mouseout", () => {
-  legendes[5].style.display = "none";
-});
-
-items[6].addEventListener("mouseover", () => {
-  legendes[6].style.display = "block";
-});
-items[6].addEventListener("mouseout", () => {
-  legendes[6].style.display = "none";
-});
-
-items[7].addEventListener("mouseover", () => {
-  legendes[7].style.display = "block";
-});
-items[7].addEventListener("mouseout", () => {
-  legendes[7].style.display = "none";
-});
-
-items[8].addEventListener("mouseover", () => {
-  legendes[8].style.display = "block";
-});
-items[8].addEventListener("mouseout", () => {
-  legendes[8].style.display = "none";
-});
-*/

@@ -7,8 +7,8 @@
 //   console.log(quizData);
 // }
 
-//   const urlRequest = "https://batman-api.sayna.space/questions";
-const urlQuestion = "./json/questions.json";
+const urlRequest = "https://batman-api.sayna.space/questions";
+// const urlQuestion = "./json/questions.json";
 
 // recolte data API question
 fetch(urlQuestion)
