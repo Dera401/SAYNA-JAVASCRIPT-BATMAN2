@@ -48,6 +48,60 @@
             <img src="Assets/Logos/flèche_down_header.png" alt="fleche" />
         </div>
         <!-- section quiz -->
+
+        <section>
+            <div class="conteneurChevalier">
+                <h2>Conaissez vous bien le chevalier noir ?</h2>
+                <div class="img-chevalier">
+                    <img src="./Assets/Illustrations-game/Batgame_2.png" alt="chevalier noir">
+                </div>
+                <div class="btn-quiz">
+                    <a class="btn-quiz-link" href="#conteneurQuiz">DEMARRER LE QUIZ</a>
+                </div>
+            </div>
+            <div id="conteneurQuiz" class="conteneurQuiz">
+                <div class="compteur">
+                    <p><span class="num-question"></span> / <span class="total-question"></span></p>
+                </div>
+                <div class="carte-quiz">
+                    <div class="carte-img"><img alt=""></div>
+                    <div class="carte">
+                        <div class="carte-question">
+                            <p></p>
+                        </div>
+                        <div class="carte-reponses">
+                            <div class="qcm">
+                                <input id="choix1" class="qcm-radio" name="choix" type="checkbox">
+                                <label class="qcm-label" for="choix1"></label>
+                            </div>
+                            <div class="qcm">
+                                <input id="choix2" class="qcm-radio" name="choix" type="checkbox">
+                                <label class="qcm-label" for="choix2"></label>
+                            </div>
+                            <div class="qcm">
+                                <input id="choix3" class="qcm-radio" name="choix" type="checkbox">
+                                <label class="qcm-label" for="choix3"></label>
+                            </div>
+                            <span class="controller"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="btn">
+                    <span class="illustr-gauche"></span>
+                    <button class="btn-suivant">QUESTION SUIVANTE</button>
+                    <span class="illustr-droite"></span>
+                </div>
+            </div>
+            <div class="overlay-game">
+                <div class="popup">
+                    <h2 class="popup-titre">Lorem, ipsum dolor sit amet consectetur </h2>
+                    <p class="popup-texte">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, architecto!</p>
+                    <button class="restart">RECOMMENCER LE QUIZ</button>
+                </div>
+            </div>
+        </section>
+
     </main>
     <footer>
         <div><img src="Assets/Logos/icon_WB.png" alt="logo Warner Bross" />
@@ -68,7 +122,8 @@
             <a href="#" onmouseover="changeTwFooter()" onmouseout="resetFooter()"><img class="jaune_footer"
                     id="twFooter" src="Assets/Logos/icon_tw.png" alt="logo Twitter" /></a>
         </div>
-        <script src="./script.js"></script>
+        <script src="./scripts/script.js"></script>
+        <script src="./scripts/scriptGame.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>The hero Batman</title>
+    <title>Home | The hero Batman</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 
 <body>
@@ -73,18 +78,37 @@
                 de nombreux reboot, donnant l’occasion à de multiples acteurs
                 d’interpréter l’homme chauve-souris. Voici les trois derniers :
             </p>
-            <div class="carte1">
-                <div class="robert">
+            <div class="carte">
+                <div class="robert item">
                     <img src="Assets/Illustrations/Bathome2.png" alt="Robert Pattinson" />
-                    <h3>Robert Pattinson <br>(2022)</h3>
+                    <div class="legende">
+                        <div class="box-radius">
+                            <img class="miniature" src="./Assets/Illustrations/tn_robertPattinson.png"
+                                alt="Robert Pattinson">
+                            <h3>Robert Pattinson <br> <span>2022</span> </h3>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="christian">
+                <div class="christian item">
                     <img src="Assets/Illustrations/Bathome3.png" alt="Christian Bale" />
-                    <h3>Christian Bale <br>(2006 - 2008 - 2012)</h3>
+                    <div class="legende">
+                        <div class="box-radius">
+                            <img class="miniature" src="./Assets/Illustrations/tn_ChristianBale.png"
+                                alt="Christian Bale ">
+                            <h3>Christian Bale <br> <span>2006 - 2008 - 2012</span> </h3>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="ben">
+                <div class="ben item">
                     <img src="Assets/Illustrations/Bathome4.png" alt="Ben Affleck" />
-                    <h3>Ben Affleck <br> 20016- 2017/2020 – 2023</h3>
+                    <div class="legende">
+                        <div class="box-radius">
+                            <img class="miniature" src="./Assets/Illustrations/tn_BenAffleck.png" alt="Ben Affleck">
+                            <h3>Ben Affleck <br> <span>2016 - 2017/2020 - 2023</span> </h3>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -103,18 +127,35 @@
                 Parmi les derniers ennemis emblématiques que nous avons pu voir au
                 cinéma, on retrouve :
             </p>
-            <div class="carte2">
-                <div class="riddler">
+            <div class="carte">
+                <div class="riddler item">
                     <img src="Assets/Illustrations/Bathome5.png" alt="The Riddler" />
-                    <h3>The Riddler - Paul Dano <br>(2022)</h3>
+                    <div class="legende">
+                        <div class="box-radius">
+                            <img class="miniature" src="./Assets/Illustrations/tn_PaulDano.png" alt="Paul Dano">
+                            <h3>The Riddler - Paul Dano <br> <span>2022</span> </h3>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="jocker">
+                <div class="jocker item">
                     <img src="Assets/Illustrations/Bathome6.png" alt="Le Joker" />
-                    <h3>Le Joker - Heath Ledger <br>(2008)</h3>
+                    <div class="legende">
+                        <div class="box-radius">
+                            <img class="miniature" src="./Assets/Illustrations/tn_heathLeadger.png" alt="Heath Ledger">
+                            <h3>Le Joker - Heath Ledger <br><span>2008</span></h3>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="darkseid">
+                <div class="darkseid item">
                     <img src="Assets/Illustrations/Bathome7.png" alt="Darkseid" />
-                    <h3>Darkseid - Ray Porter <br>(2022)</h3>
+                    <div class="legende">
+                        <div class="box-radius">
+                            <img class="miniature" src="./Assets/Illustrations/tn_RayPorter.png" alt="Ray Porter">
+                            <h3>Darkseid - Ray Porter <br> <span>2022</span> </h3>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -136,18 +177,35 @@
                 ville de la criminalité qui y règne.
             </p>
 
-            <div class="carte3">
-                <div class="alfred">
+            <div class="carte">
+                <div class="alfred item">
                     <img src="Assets/Illustrations/Bathome9.png" alt="Alfred Pennyworth" />
-                    <h3>Alfred Pennyworth - Michael Cain <br>(2006 - 2008 - 2012)</h3>
+                    <div class="legende">
+                        <div class="box-radius">
+                            <img class="miniature" src="./Assets/Illustrations/tn_MichaelCain.png" alt="Michael Cain">
+                            <h3>Alfred Pennyworth - Michael Cain <br> <span>2006 - 2008 - 2012</span> </h3>
+                        </div>
+                    </div>
                 </div>
-                <div class="catwoman">
+
+                <div class="catwoman item">
                     <img src="Assets/Illustrations/Bathome8.png" alt="Catwoman" />
-                    <h3>Catwoman - Zoé Kravitz <br>(2008)</h3>
+                    <div class="legende">
+                        <div class="box-radius">
+                            <img class="miniature" src="./Assets/Illustrations/tn_ZoeKravitz.png" alt="Zoé Kravitz">
+                            <h3>Catwoman - Zoé Kravitz <br> <span> 2008 </span> </h3>
+                        </div>
+                    </div>
                 </div>
-                <div class="james">
+
+                <div class="james item">
                     <img src="Assets/Illustrations/Bathome10.png" alt="James Gordon" />
-                    <h3>James Gordon <br>(2014-2019)</h3>
+                    <div class="legende">
+                        <div class="box-radius">
+                            <img class="miniature" src="./Assets/Illustrations/tn_James Gordon.png" alt="James Gordon">
+                            <h3>James Gordon <br> <span> 2014 - 2019 </span> </h3>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -226,14 +284,15 @@
                     <label class="titre">NEWSLETTER</label>
                     <label>En cochant cette case vous acceptez de recevoir l’actualité concernant les <br> aventures
                         de Batman :<input type="checkbox"></label>
-                    <div><label class="frequence"> Choisissez la fréquence à laquelle vous souhaitez recevoir votre
-                            newsletter <img class="select-fleche" src="./Assets/Logos/icon_flèche_2.png"
-                                alt="fleche"></label>
+                    <div><label class="frequence"> Choisissez la fréquence à laquelle vous
+                            souhaitez recevoir votre
+                            newsletter</label>
 
-                        <!-- <select id="frequence">
-                            <option value="journalière">journalière</option>
-                            <option value="hebdomadaire">hebdomadaire</option>
-                        </select> -->
+                        <select id="frequence" class="myselect">
+                            <option value="Par jour">Par jour</option>
+                            <option value="Par semaine">Par semaine</option>
+                            <option value="Par mois">Par mois</option>
+                        </select>
                     </div>
 
                     <label class="news">Souhaitez-vous recevoir des news</label>
@@ -306,7 +365,7 @@
         </div>
 
     </footer>
-    <script src="./script.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 
 </html>

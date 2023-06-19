@@ -287,11 +287,10 @@ nav ul {
   padding: 0;
 }
 
+/* partie frequence  */
+
 /* rotation de la fleche */
-img.select-fleche {
-  transform: rotate(90deg);
-  width: 15px;
-}
+img.select-fleche {}
 
 /* didposition flex des p dans input */
 .radiobtn {
@@ -315,6 +314,66 @@ img.select-fleche {
   background: linear-gradient(90deg, rgba(237, 222, 191, 0.7) 30%, rgba(137, 0, 8, 1) 100%);
 }
 
+/* mise en forme de select */
+
+/* utilisation de select2 */
+
+select#frequence {
+  width: 100%;
+  position: relative;
+}
+
+/* background par defaut */
+.select2-container--default .select2-selection--single {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+/* partie option general */
+.select2-container--open .select2-dropdown--below {
+  border: none !important;
+}
+
+/* enlever la fleche */
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b, .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border: none !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+
+  background: url('../Assets/Logos/icon_flèche_2.png') no-repeat;
+  background-size: 15px;
+  transform: rotate(90deg);
+}
+
+/* affichage par defaut */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: white !important;
+  font-family: 'space grotesk', sans-serif;
+  font-size: 1.2rem;
+  border: none !important;
+}
+
+/* suppression de la barre de recherche */
+.select2-search--dropdown {
+  display: none !important;
+}
+
+/* partie selectionné */
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background: linear-gradient(158deg, rgba(237, 222, 191, 0.6) 0%, rgba(25, 88, 125, 0.6) 60%) !important;
+}
+
+/* element dans option */
+.select2-results__option {
+  background: linear-gradient(158deg, rgba(237, 222, 191, 0.6) 0%, rgba(25, 88, 125, 0.6) 60%), black;
+  border-top: 1px solid !important;
+  border-bottom: 1px solid !important;
+  border-image: linear-gradient(158deg, rgba(237, 222, 191, 0.6) 0%, rgba(25, 88, 125, 0.6) 60%)10;
+  padding: 10px !important;
+  font-family: 'space grotesk', sans-serif;
+  font-size: 1.2rem;
+}
 
 /* pour enlever les bouton du radio */
 input#comics, input#films, input#tout {
@@ -462,15 +521,60 @@ footer div {
 }
 
 /* pseudo class sur les cartes */
-.carte1 img:hover, .carte2 img:hover, .carte3 img:hover {
+.carte .item:hover {
   transform: scale(1.1);
 }
 
 /* mise en place des elements enfants en flex */
-.carte1, .carte2, .carte3 {
+.carte {
   display: flex;
   margin-top: 80px;
   justify-content: space-between;
+}
+
+/* features nouveau legende */
+.carte .item {
+  position: relative;
+}
+
+.item .legende {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.532);
+  padding-top: 5px;
+  border: 2px solid rgba(73, 72, 72, 0.479);
+  display: none;
+}
+
+.legende .box-radius {
+  background: linear-gradient(90deg, rgba(237, 222, 191, 0.3) 30%, rgba(137, 0, 8, 0.3) 100%);
+  border-radius: 30px;
+  margin: 20px 40px;
+}
+
+.box-radius h3 {
+  font-size: 1.2rem;
+  padding: 15px 10px;
+}
+
+.box-radius span {
+  color: #f8f184;
+  font-weight: normal;
+}
+
+.box-radius .miniature {
+  float: left;
+  display: block;
+  max-width: 70px;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+.legende * {
+  margin: 0;
+  padding: 0;
 }
 
 
