@@ -46,6 +46,9 @@ li a {
   text-decoration: none;
 }
 
+a {
+  cursor: pointer;
+}
 
 h2 {
   font-size: 3.6rem;
@@ -315,8 +318,6 @@ nav ul {
 
 /* partie frequence  */
 
-/* rotation de la fleche */
-img.select-fleche {}
 
 /* didposition flex des p dans input */
 .radiobtn {
@@ -609,3 +610,19 @@ footer div {
 .league, video {
   max-width: 100%;
 }
+
+/* animation avec la souris */
+/* #canvas {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: none;
+  z-index: 5;
+}
+
+main *, header *, footer * {
+  z-index: 9;
+  position: relative;
+} */

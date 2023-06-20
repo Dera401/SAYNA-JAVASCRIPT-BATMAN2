@@ -113,6 +113,77 @@ document.querySelectorAll(".cacheCarte").forEach(function (cache) {
   observer.observe(cache);
 });
 
+// animation de la chauve souris
+/*const canvas = document.getElementById("canvas");
+const img = document.querySelector(".fond-canvas");
+const ctx = canvas.getContext("2d");
+const width = (canvas.width = window.innerWidth);
+const height = (canvas.height = window.innerHeight);
+let raf;
+let running = false;
+
+const ball = {
+  x: 50,
+  y: 50,
+  vx: 5,
+  vy: 1,
+  radius: 25,
+  color: "blue",
+  draw: function () {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
+    ctx.closePath();
+    ctx.fillStyle = this.color;
+    ctx.fill();
+  },
+};
+
+function clear() {
+  let patern = ctx.createPattern(img, "repeat");
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = patern;
+  ctx.fill();
+}
+
+function draw() {
+  clear();
+  ball.draw();
+  ball.x += ball.vx;
+  ball.y += ball.vy;
+
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+    ball.vy = -ball.vy;
+  }
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+    ball.vx = -ball.vx;
+  }
+
+  raf = window.requestAnimationFrame(draw);
+}
+
+canvas.addEventListener("mousemove", function (e) {
+  if (!running) {
+    clear();
+    ball.x = e.clientX;
+    ball.y = e.clientY;
+    ball.draw();
+  }
+});
+
+canvas.addEventListener("click", function (e) {
+  if (!running) {
+    raf = window.requestAnimationFrame(draw);
+    running = true;
+  }
+});
+
+canvas.addEventListener("mouseout", function (e) {
+  window.cancelAnimationFrame(raf);
+  running = false;
+});
+
+ball.draw(); */
+
 // animation avec scroll pour les textes
 const optionsContent = {
   root: null, //zone d'affichage
