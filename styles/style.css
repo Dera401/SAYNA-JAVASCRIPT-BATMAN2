@@ -611,18 +611,18 @@ footer div {
   max-width: 100%;
 }
 
-/* animation avec la souris */
-/* #canvas {
+
+/* canevas et controle avec la */
+#myCanvas {
   margin: 0;
   padding: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  background: none;
   z-index: 5;
 }
 
-main *, header *, footer * {
+.intro, header * {
   z-index: 9;
   position: relative;
-} */
+}
