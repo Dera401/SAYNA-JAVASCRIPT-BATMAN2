@@ -152,25 +152,25 @@ nav ul {
 /* definition des class d'animation  */
 /* animation des cartes */
 .cacheCarte {
-  transform: scale(0);
+  transform: scale(0.5);
   opacity: 0;
 }
 
 .cacheContent {
-  transform: translateX(-100px);
+  transform: translateX(-50px);
   opacity: 0;
 }
 
 .reveleContent {
   transform: translateX(0);
   opacity: 1;
-  transition: 1s ease-in;
+  transition: 0.5s ease-in;
 }
 
 .reveleCarte {
   transform: scale(1);
   opacity: 1;
-  transition: 1s cubic-bezier(0.71, 0.22, 0.26, 0.87);
+  transition: 0.5s cubic-bezier(0.71, 0.22, 0.26, 0.87);
 }
 
 /* section intro */

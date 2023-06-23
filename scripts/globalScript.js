@@ -92,6 +92,7 @@ flecheHaut.addEventListener("click", () => {
 });
 
 // animation en fonction du scroll
+// pour les images
 // definition de l'API intersection observer
 const ratio = 0.1;
 const options = {
@@ -111,4 +112,19 @@ const detectIntersect = (entries, observer) => {
 const observer = new IntersectionObserver(detectIntersect, options);
 document.querySelectorAll(".cacheCarte").forEach(function (cache) {
   observer.observe(cache);
+});
+
+// animation avec scroll pour les textes
+
+const detectIntersection = (entries, observeText) => {
+  entries.forEach(function (entry) {
+    if (entry.intersectionRatio > ratio) {
+      entry.target.classList.add("reveleContent");
+      observeText.unobserve(entry.target);
+    }
+  });
+};
+const observeText = new IntersectionObserver(detectIntersection, options);
+document.querySelectorAll(".cacheContent").forEach(function (cacher) {
+  observeText.observe(cacher);
 });

@@ -45,43 +45,21 @@ img.onload = function () {
   });
 };
 
-// animation avec scroll pour les textes
-const optionsContent = {
-  root: null, //zone d'affichage
-  rootMargin: "0px", //marge d'affichage
-  threshold: ratio, //ratio du declenchement de l'observateur
-};
-
-const detectIntersection = (entries, observervateur) => {
-  entries.forEach(function (entry) {
-    if (entry.intersectionRatio > ratio) {
-      entry.target.classList.add("reveleContent");
-      observervateur.unobserve(entry.target);
-    }
-  });
-};
-const observervateur = new IntersectionObserver(
-  detectIntersection,
-  optionsContent
-);
-document.querySelectorAll(".cacheContent").forEach(function (cache) {
-  observervateur.observe(cache);
-});
-
 // changement du deplacement vers ancre en js
 const batmanCine = document.querySelector(".first");
 const nemesis = document.querySelector(".second");
 
+const cineAncre = document.querySelector("#batmanAuCine");
+const nemesisAncre = document.querySelector("#nemesis");
+
 batmanCine.addEventListener("click", () => {
-  window.scrollBy({
-    top: 950,
+  cineAncre.scrollIntoView({
     behavior: "smooth",
   });
 });
 
 nemesis.addEventListener("click", () => {
-  window.scrollBy({
-    top: 1700,
+  nemesisAncre.scrollIntoView({
     behavior: "smooth",
   });
 });
